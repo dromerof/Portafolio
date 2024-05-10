@@ -1,0 +1,163 @@
+---
+import LinkButton from "./LinkButton.astro";
+import Turso from "../icons/Turso.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Node from "../icons/NodeJS.astro"
+import GitHub from "../icons/GitHub.astro"; 
+import Link from "../icons/Link.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import NestJS from "../icons/NestJS.astro";
+import Postman from "../icons/Postman.astro";
+import Postgres from "../icons/PostgresSQL.astro";
+import Docker from "../icons/Docker.astro";
+import Git from "../icons/Git.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import TypeORM from "../icons/TypeORM.astro";
+
+const TAGS = {
+  JAVASCRIPT: {
+    name: "JavaScript.js",
+    class: "bg-[#f0db4f] text-black ",
+    icon: JavaScript,
+  },
+
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178c6] text-black",
+    icon: TypeScript,
+  },
+
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#59a645] text-black",
+    icon: Node,
+  },
+
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-[#ffff] text-black",
+    icon: NestJS,
+  },
+
+  TYPEORM: {
+    name: "TypeORM",
+    class: "bg-[#ffff] text-black",
+    icon: TypeORM,
+  },
+
+  TURSO: {
+    name: "Turso",
+    class: "bg-[#ffff] text-black",
+    icon: Turso,
+  },
+
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#ffff] text-black",
+    icon: MongoDB,
+  },
+
+  POSTGRES: {
+    name: "Postgres",
+    class: "bg-[#ffff] text-black",
+    icon: Postgres,
+  },
+
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#ffff] text-black",
+    icon: Docker,
+  },
+
+  POSTMAN: {
+    name: "Postman",
+    class: "bg-[#ff6c37] text-black",
+    icon: Postman,
+  },
+  GIT: {
+    name: "Git",
+    class: "bg-[#ffff] text-black",
+    icon: Git,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "ChatXpress",
+    description:
+      "Un chat en tiempo rea el cual te permitira chatear con personas de forma anónima, sin necesidad de registrarte.",
+    link: "https://chatxpress.up.railway.app/",
+    github: "https://github.com/dromerof/real-time-chat",
+    image: "projects/chat.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.TURSO],
+  },
+  {
+    title: "RestServer",
+    description:
+      "Rest Server Básico, cuenta con todo lo necesario para comenzar un proyecto, cuenta con un CRUD competo para Usuarios, Categorías, Archivos y ademas Google identity.",
+    github: "https://github.com/dromerof/Restserver",
+    image: "projects/restServer.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.MONGODB, TAGS.POSTMAN, TAGS.GIT],
+  },
+
+  {
+    title: "TesloShop",
+    description:
+      "TesloShop es un Ecommerce, cuenta con todo lo necesario para comenzar tu negocio, cuenta con un CRUD competo para Usuarios, Productos, Imagenes",
+    github: "https://github.com/dromerof/Restserver",
+    image: "projects/restServer.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.TYPEORM,TAGS.POSTGRES, TAGS.DOCKER, TAGS.POSTMAN, TAGS.GIT],
+  },
+
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                {tag.icon && <tag.icon class="size-4" />}
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-gray-500">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4"/>
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>

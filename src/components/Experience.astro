@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  //Siempre poner lo más reciente arriba
+  {
+    date: "2024",
+    title: "Desarrollador Backend Jr.",
+    company: "Dromerof",
+    description:
+      "Desarrollé un sistema de gestión de inventario para una empresa minorista. El sistema permite a la empresa realizar un seguimiento de su inventario, generar informes y administrar sus pedidos.",
+    // link: "por si tengo algo que mostrar",
+
+  },
+  {
+    date: "tiempo",
+    title: "cargo en ese momento",
+    company: "en donde",
+    description: "Futura experiencia",
+  },
+  {
+    date: "tiempo",
+    title: "cargo en ese momento",
+    company: "en donde",
+    description: "Futura experiencia",
+  },
+  {
+    date: "tiempo",
+    title: "cargo en ese momento",
+    company: "en donde",
+    description: "Futura experiencia",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
