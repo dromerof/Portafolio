@@ -86,7 +86,7 @@ const PROJECTS = [
     title: "ChatXpress",
     description:
     "Un chat en tiempo real el cual te permitirá chatear con personas de forma anónima, sin necesidad de registrarte. ya que genera nombres de manera automática",
-    link: "https://chatxpress.up.railway.app/",
+    link:"https://chatxpress.up.railway.app/",
     github: "https://github.com/dromerof/real-time-chat",
     image: "projects/chat.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.TURSO],
@@ -95,6 +95,7 @@ const PROJECTS = [
     title: "RestServer",
     description:
       "Rest Server Básico, con todo lo necesario para comenzar un proyecto, un CRUD competo para Usuarios, Categorías, Archivos y ademas Google identity.",
+      link:"https://documenter.getpostman.com/view/32372900/2sA3JM8hez#5ca2cd34-2852-49bb-865d-4a994fa93a20",
     github: "https://github.com/dromerof/Restserver",
     image: "projects/restServer.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.MONGODB, TAGS.POSTMAN, TAGS.GIT],
@@ -104,7 +105,7 @@ const PROJECTS = [
     title: "TesloShop",
     description:
       "TesloShop es un Ecommerce, contiene todo lo necesario para comenzar tu negocio, cuenta con un CRUD competo para Usuarios, Productos, Imagenes",
-    github: "https://github.com/dromerof/Restserver",
+    github: "https://github.com/dromerof/TesloShop",
     image: "projects/restServer.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.TYPEORM,TAGS.POSTGRES, TAGS.DOCKER, TAGS.POSTMAN, TAGS.GIT],
   },
@@ -118,7 +119,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Captura de pantalla del proyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -140,7 +141,7 @@ const PROJECTS = [
           ))}
         </ul>
 
-      <div class="mt-2 text-gray-500">{description}</div>
+      <div class="mt-2  text-gray-500">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
             <LinkButton href={github}>
