@@ -13,6 +13,7 @@ import Docker from "../icons/Docker.astro";
 import Git from "../icons/Git.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import TypeORM from "../icons/TypeORM.astro";
+import Swagger from "../icons/Swagger.astro";
 
 const TAGS = {
   JAVASCRIPT: {
@@ -69,6 +70,12 @@ const TAGS = {
     icon: Docker,
   },
 
+  SWAGGER:{
+    name: "Swagger",
+    class: "bg-[#85ea2d] text-black",
+    icon: Swagger,
+  },
+
   POSTMAN: {
     name: "Postman",
     class: "bg-[#ff6c37] text-black",
@@ -106,7 +113,7 @@ const PROJECTS = [
       "ModeMix API proporciona una experiencia integral para desarrolladores y usuarios finales, con gestión de productos, categorías y autenticación de usuarios. También incluye funciones avanzadas para cargar, almacenar y manipular imágenes de productos.",
     github: "https://github.com/dromerof/ModeMix",
     image: "projects/ModeMix.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.TYPEORM,TAGS.POSTGRES, TAGS.DOCKER, TAGS.POSTMAN, TAGS.GIT],
+    tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.TYPEORM,TAGS.POSTGRES, TAGS.DOCKER, TAGS.SWAGGER, TAGS.POSTMAN, TAGS.GIT],
   },
 
 ];
