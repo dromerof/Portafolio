@@ -4,6 +4,7 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../icons/LinkedIn.astro"
 import GmailIcon from "../icons/Gmail.astro"
 import GitHubIcon from "../icons/GitHub.astro"
+import DowloadIcon from "../icons/Dowload.astro"
 import SocialPill from "../components/SocialPill.astro"
 ---
 
@@ -36,7 +37,7 @@ import SocialPill from "../components/SocialPill.astro"
     Apasionado por la tecnología y siempre al pendiente de los avances de esta.
     
   </p>
-  <nav class="flex flex-wrap gap-5 mt-8">
+  <nav class="flex flex-wrap gap-2 mt-8"> 
     <SocialPill href="https://linkedin.com/in/dromerof">
       <LinkedInIcon class="size-4" />
       LinkedIn
@@ -46,8 +47,12 @@ import SocialPill from "../components/SocialPill.astro"
       Contáctame
     </SocialPill>
     <SocialPill href="https://github.com/dromerof">
-        <GitHubIcon class="size-4 md:size-6"/>
+        <GitHubIcon class="size-4 md:size-5"/>
         GitHub
     </SocialPill>
+    <SocialPill href= "/cv/DANIEL ROMERO CV.pdf" download="DANIEL ROMERO CV">
+      <DowloadIcon class="size-4 md:size-5"/>
+      CV
+  </SocialPill>
   </nav>
 </div>
